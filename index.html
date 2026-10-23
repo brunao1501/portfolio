@@ -77,6 +77,15 @@ footer{padding:34px 0;text-align:center;color:var(--mut);font-size:12px;border-t
 @media (prefers-color-scheme:dark){.cursor-glow{background:radial-gradient(circle,rgba(70,120,230,.30) 0%,rgba(52,96,200,.14) 32%,transparent 66%);mix-blend-mode:screen}}
 .cursor-glow.on{opacity:1}
 @media (hover:none),(prefers-reduced-motion:reduce){.cursor-glow{display:none}}
+.grid.skills{grid-template-columns:repeat(4,1fr);gap:16px}
+.grid.skills .card{display:flex;flex-direction:column;padding:28px 24px}
+.grid.skills .card h3{font-size:20px;margin:0 0 4px}
+.grid.skills .chips{margin-top:auto;padding-top:14px}
+.grid.projects{grid-template-columns:repeat(2,1fr)}
+.grid.projects .card{display:flex;flex-direction:column}
+.grid.projects .more{margin-top:auto;padding-top:20px}
+@media(max-width:900px){.grid.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid.skills,.grid.projects{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -108,7 +117,7 @@ footer{padding:34px 0;text-align:center;color:var(--mut);font-size:12px;border-t
 <section class="alt" id="projetos"><div class="wrap">
 <h2 class="r" data-i="h_proj">Projetos.</h2>
 <p class="sub r" data-i="proj">Direto do meu GitHub: código real, em produção.</p>
-<div class="grid">
+<div class="grid projects">
 <article class="card r"><span class="tag">Web · BGTech</span><h3>BGTech Consulting</h3><p data-i="p1">Site oficial da consultoria: criação de sites, agentes de Inteligência Artificial e suporte de TI para pequenas empresas.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">IA</span></div><a class="more" href="https://github.com/brunao1501/bgtech-consulting" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
 <article class="card r"><span class="tag">E-commerce</span><h3>BGTech Store</h3><p data-i="p2">Vitrine da BGTech Store: tecnologia, Apple, Xiaomi e acessórios no modelo de venda sob encomenda.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div><a class="more" href="https://github.com/brunao1501/bgtech-store" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
 <article class="card r"><span class="tag">PWA · React</span><h3>Trabalho Justo</h3><p data-i="p3">Seu tempo tem valor. Aplicação que ajuda profissionais autônomos a calcular uma referência de preço considerando remuneração desejada, despesas, reserva e horas disponíveis. Simula descontos e gera orçamentos em PDF prontos para o cliente.</p><div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">PWA offline</span><span class="chip">Testes</span></div><a class="more" href="https://github.com/brunao1501/trabalho-justo" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
@@ -118,7 +127,7 @@ footer{padding:34px 0;text-align:center;color:var(--mut);font-size:12px;border-t
 <section id="habilidades"><div class="wrap">
 <h2 class="r" data-i="h_skills">O que eu domino.</h2>
 <p class="sub r" data-i="skills">Da infraestrutura ao marketing digital.</p>
-<div class="grid">
+<div class="grid skills">
 <div class="card r"><h3 data-i="k1">Infra & Cloud</h3><div class="chips"><span class="chip">Google Workspace</span><span class="chip">AWS</span><span class="chip">Redes</span><span class="chip">Hardware</span></div></div>
 <div class="card r"><h3 data-i="k2">Desenvolvimento</h3><div class="chips"><span class="chip">HTML · CSS · JS</span><span class="chip">Python</span><span class="chip">Sites & Apps</span></div></div>
 <div class="card r"><h3 data-i="k3">IA & Automação</h3><div class="chips"><span class="chip">Agentes de IA</span><span class="chip">Prompt Engineering</span><span class="chip">Automações</span></div></div>
