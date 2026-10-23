@@ -1,4 +1,4 @@
-# Bruno Pereira Santos — Portfólio
+# Bruno Pereira Santos | Portfólio
 
 Landing page pessoal (PT/EN), minimalista e com animações, publicada na Vercel.
 
