@@ -73,9 +73,18 @@ footer{padding:34px 0;text-align:center;color:var(--mut);font-size:12px;border-t
 .r.in{opacity:1;transform:none}
 .hero .r{transition-duration:1.2s}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s,width .35s cubic-bezier(.2,.8,.2,1),height .35s cubic-bezier(.2,.8,.2,1),background .35s,border-color .35s}
+.cur-dot{width:8px;height:8px;background:var(--acc)}
+.cur-ring{width:36px;height:36px;border:1.5px solid color-mix(in srgb,var(--acc) 60%,transparent)}
+.cur-ring.hover{width:64px;height:64px;background:color-mix(in srgb,var(--acc) 12%,transparent);border-color:transparent}
+.cur-ring.down{width:26px;height:26px}
+.cur-on .cur-dot,.cur-on .cur-ring{opacity:1}
+@media (hover:hover) and (pointer:fine){body.cur-on,body.cur-on a,body.cur-on button{cursor:none}}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cur-dot,.cur-ring{display:none}}
 </style>
 </head>
 <body>
+<div class="cur-dot"></div><div class="cur-ring"></div>
 <nav><div class="wrap"><a href="#top"><b>Bruno Santos</b></a>
 <div class="links"><a href="#sobre" data-i="n1">Sobre</a><a href="#projetos" data-i="n2">Projetos</a><a href="#experiencia" data-i="n3">Experiência</a><a href="#contato" data-i="n4">Contato</a></div>
 <button class="lang" id="lang">EN</button></div></nav>
@@ -150,6 +159,16 @@ const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){cons
 document.querySelectorAll(".r").forEach(e=>io.observe(e));
 document.querySelectorAll(".card").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
 addEventListener("scroll",()=>{const o=document.querySelector(".orb");o.style.translate=`0 ${scrollY*.3}px`},{passive:true});
+
+if(matchMedia("(hover:hover) and (pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+const d=document.querySelector(".cur-dot"),g=document.querySelector(".cur-ring");let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;d.style.left=mx+"px";d.style.top=my+"px";document.body.classList.add("cur-on")},{passive:true});
+document.addEventListener("mouseleave",()=>document.body.classList.remove("cur-on"));
+addEventListener("mousedown",()=>g.classList.add("down"));addEventListener("mouseup",()=>g.classList.remove("down"));
+document.querySelectorAll("a,button,.card").forEach(el=>{el.addEventListener("mouseenter",()=>g.classList.add("hover"));el.addEventListener("mouseleave",()=>g.classList.remove("hover"))});
+(function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;g.style.left=rx+"px";g.style.top=ry+"px";requestAnimationFrame(loop)})();
+document.querySelectorAll(".btn").forEach(b=>{b.addEventListener("mousemove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px) scale(1.04)`});b.addEventListener("mouseleave",()=>b.style.transform="")});
+}
 </script>
 </body>
 </html>
