@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bruno Pereira Santos — Analista de TI & Educação em Tech</title>
+<meta name="description" content="Portfólio de Bruno Pereira Santos: Analista de TI, professor de informática e fundador da BGTech Consulting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f5f5f7;--fg:#1d1d1f;--mut:#6e6e73;--line:#d2d2d7;--acc:#0071e3;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--bg2:#111113;--fg:#f5f5f7;--mut:#a1a1a6;--line:#2c2c2e;--acc:#2997ff;--card:#161618}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid color-mix(in srgb,var(--line) 50%,transparent)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:13px}
+nav .links{display:flex;gap:26px;color:var(--mut)}
+nav .links a:hover{color:var(--fg)}
+.lang{border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:none;color:var(--fg);font:inherit;cursor:pointer}
+@media(max-width:640px){nav .links{display:none}}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 22px 60px;position:relative}
+.orb{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(90px);opacity:.35;z-index:-1;background:conic-gradient(from 0deg,#0071e3,#22d3ee,#a855f7,#0071e3);animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{width:168px;height:168px;border-radius:50%;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.eyebrow{margin-top:28px;font-size:15px;font-weight:600;color:var(--acc)}
+h1{font-size:clamp(44px,9vw,96px);font-weight:800;letter-spacing:-.045em;line-height:1.02;margin-top:8px}
+h1 .grad{background:linear-gradient(90deg,#0071e3,#22d3ee,#a855f7,#0071e3);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+@keyframes shine{to{background-position:300% 0}}
+.lead{max-width:640px;margin:22px auto 0;font-size:clamp(18px,2.4vw,22px);color:var(--mut);line-height:1.45}
+.cta{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.btn{padding:12px 24px;border-radius:999px;font-weight:500;font-size:16px;transition:transform .2s,background .2s}
+.btn:hover{transform:scale(1.04)}
+.btn.p{background:var(--acc);color:#fff}
+.btn.s{color:var(--acc);border:1px solid var(--acc)}
+.scroll{position:absolute;bottom:28px;width:24px;height:38px;border:2px solid var(--line);border-radius:14px}
+.scroll::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--mut);animation:dot 1.6s infinite}
+@keyframes dot{to{transform:translateY(12px);opacity:0}}
+section{padding:110px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(34px,6vw,56px);font-weight:700;letter-spacing:-.035em;line-height:1.08;text-align:center}
+.sub{text-align:center;color:var(--mut);font-size:19px;margin:14px auto 56px;max-width:600px;line-height:1.45}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.stat{text-align:center;padding:30px 10px}
+.stat b{display:block;font-size:56px;font-weight:700;letter-spacing:-.04em;background:linear-gradient(180deg,var(--fg),var(--mut));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--mut);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border-radius:24px;padding:32px;border:1px solid var(--line);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;position:relative;overflow:hidden;transform-style:preserve-3d}
+.card:hover{box-shadow:0 30px 60px rgba(0,0,0,.12)}
+.card .tag{font-size:12px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.08em}
+.card h3{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:10px 0}
+.card p{color:var(--mut);line-height:1.5;font-size:15px}
+.card .more{display:inline-block;margin-top:20px;color:var(--acc);font-weight:500}
+.card .more:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--bg2);color:var(--mut)}
+.tl{max-width:760px;margin:0 auto;position:relative}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.item{padding-left:44px;position:relative;margin-bottom:46px}
+.item::before{content:"";position:absolute;left:1px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px color-mix(in srgb,var(--acc) 20%,transparent)}
+.item small{color:var(--mut);font-size:14px}
+.item h3{font-size:22px;letter-spacing:-.02em;margin:4px 0 2px}
+.item h4{font-weight:500;color:var(--acc);font-size:15px;margin-bottom:10px}
+.item li{color:var(--mut);line-height:1.55;margin-left:18px;font-size:15px}
+.contact{text-align:center}
+.contact .big{font-size:clamp(22px,4vw,34px);font-weight:600;letter-spacing:-.02em;display:inline-block;margin-top:8px}
+.contact .big:hover{color:var(--acc)}
+footer{padding:34px 0;text-align:center;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
+.r{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.r.in{opacity:1;transform:none}
+.hero .r{transition-duration:1.2s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="#top"><b>Bruno Santos</b></a>
+<div class="links"><a href="#sobre" data-i="n1">Sobre</a><a href="#projetos" data-i="n2">Projetos</a><a href="#experiencia" data-i="n3">Experiência</a><a href="#contato" data-i="n4">Contato</a></div>
+<button class="lang" id="lang">EN</button></div></nav>
+
+<header class="hero" id="top">
+<div class="orb"></div>
+<img class="avatar r" src="data:image/jpeg;base64,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" alt="Bruno Pereira Santos">
+<p class="eyebrow r" data-i="eyebrow">Analista de TI · Educação em Tecnologia</p>
+<h1 class="r">Bruno<br><span class="grad">Pereira Santos</span></h1>
+<p class="lead r" data-i="lead">Construo soluções digitais com web, nuvem, dados e IA — e ensino a próxima geração a fazer o mesmo.</p>
+<div class="cta r"><a class="btn p" href="#projetos" data-i="cta1">Ver projetos</a><a class="btn s" href="#contato" data-i="cta2">Fale comigo</a></div>
+<div class="scroll"></div>
+</header>
+
+<section id="sobre"><div class="wrap">
+<h2 class="r" data-i="h_about">Do suporte à sala de aula.</h2>
+<p class="sub r" data-i="about">Entrei na tecnologia pelo suporte, onde é preciso resolver rápido e explicar bem. Migrei para infraestrutura, nuvem e desenvolvimento web — e hoje ensino informática para jovens do Fundamental e Médio, enquanto lidero a BGTech Consulting.</p>
+<div class="stats">
+<div class="stat r"><b data-count="7">0</b><span data-i="s1">anos em TI</span></div>
+<div class="stat r"><b data-count="4">0</b><span data-i="s2">projetos públicos</span></div>
+<div class="stat r"><b data-count="2">0</b><span data-i="s3">empresas fundadas</span></div>
+<div class="stat r"><b>EN</b><span data-i="s4">inglês avançado</span></div>
+</div></div></section>
+
+<section class="alt" id="projetos"><div class="wrap">
+<h2 class="r" data-i="h_proj">Projetos.</h2>
+<p class="sub r" data-i="proj">Direto do meu GitHub — código real, em produção.</p>
+<div class="grid">
+<article class="card r"><span class="tag">Web · BGTech</span><h3>BGTech Consulting</h3><p data-i="p1">Site oficial da consultoria: criação de sites, agentes de Inteligência Artificial e suporte de TI para pequenas empresas.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">IA</span></div><a class="more" href="https://github.com/brunao1501/bgtech-consulting" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
+<article class="card r"><span class="tag">E-commerce</span><h3>BGTech Store</h3><p data-i="p2">Vitrine da BGTech Store: tecnologia, Apple, Xiaomi e acessórios no modelo de venda sob encomenda.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div><a class="more" href="https://github.com/brunao1501/bgtech-store" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
+<article class="card r"><span class="tag">App · TypeScript</span><h3>Trabalho Justo</h3><p data-i="p3">Aplicação web em TypeScript voltada a conectar trabalho e pessoas de forma justa e transparente.</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">Web App</span></div><a class="more" href="https://github.com/brunao1501/trabalho-justo" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
+<article class="card r"><span class="tag">Plataforma · JS</span><h3>BGTech Central</h3><p data-i="p4">Central em JavaScript que reúne ferramentas e operações do ecossistema BGTech em um só lugar.</p><div class="chips"><span class="chip">JavaScript</span><span class="chip">Dashboard</span></div><a class="more" href="https://github.com/brunao1501/bgtech-central" target="_blank" rel="noopener" data-i="more">Ver no GitHub ›</a></article>
+</div></div></section>
+
+<section id="habilidades"><div class="wrap">
+<h2 class="r" data-i="h_skills">O que eu domino.</h2>
+<p class="sub r" data-i="skills">Da infraestrutura ao marketing digital.</p>
+<div class="grid">
+<div class="card r"><h3 data-i="k1">Infra & Cloud</h3><div class="chips"><span class="chip">Google Workspace</span><span class="chip">AWS</span><span class="chip">Redes</span><span class="chip">Hardware</span></div></div>
+<div class="card r"><h3 data-i="k2">Desenvolvimento</h3><div class="chips"><span class="chip">HTML · CSS · JS</span><span class="chip">Python</span><span class="chip">Sites & Apps</span></div></div>
+<div class="card r"><h3 data-i="k3">IA & Automação</h3><div class="chips"><span class="chip">Agentes de IA</span><span class="chip">Prompt Engineering</span><span class="chip">Automações</span></div></div>
+<div class="card r"><h3 data-i="k4">Dados & Marketing</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">Google Ads</span><span class="chip">Meta Ads</span><span class="chip">SEO</span></div></div>
+</div></div></section>
+
+<section class="alt" id="experiencia"><div class="wrap">
+<h2 class="r" data-i="h_exp">Trajetória.</h2>
+<p class="sub r" data-i="exp">Sete anos resolvendo problemas reais.</p>
+<div class="tl">
+<div class="item r"><small>2022 — <span data-i="now">Presente</span></small><h3 data-i="e1t">Analista de TI & Professor de Informática</h3><h4>Centro Educacional Novo Ideal</h4><ul><li data-i="e1a">Administração do Google Workspace for Education.</li><li data-i="e1b">Aulas de informática e programação para Fundamental II e Médio.</li><li data-i="e1c">Materiais sobre Power BI, dados e carreiras em tecnologia.</li></ul></div>
+<div class="item r"><small>2022 — <span data-i="now">Presente</span></small><h3 data-i="e2t">Fundador & Consultor de Tecnologia</h3><h4>BGTech Consulting</h4><ul><li data-i="e2a">Sites, landing pages e apps sob medida.</li><li data-i="e2b">Agentes de IA para atendimento e processos de PMEs.</li><li data-i="e2c">Gestão de tráfego pago (Google Ads e Meta Ads).</li></ul></div>
+<div class="item r"><small>2021 — 2022</small><h3 data-i="e3t">Analista de Suporte Técnico Jr.</h3><h4>Centro de Estudos Júlio Verne</h4><ul><li data-i="e3a">Suporte a professores, alunos e equipe; padronização de processos ISO 9001.</li></ul></div>
+<div class="item r"><small>2016 — 2018</small><h3 data-i="e4t">Suporte Técnico Jr. — Apple Support</h3><h4>Concentrix Brasil</h4><ul><li data-i="e4a">Atendimento especializado para iPhone, iPad, Apple Watch e Mac.</li></ul></div>
+<div class="item r"><small data-i="edud">Cursando · 2029</small><h3 data-i="e5t">Engenharia de Software</h3><h4>Estácio</h4><ul><li data-i="e5a">Google AI Essentials (2026) · AWS Cloud Practitioner em preparação.</li></ul></div>
+</div></div></section>
+
+<section id="contato" class="contact"><div class="wrap">
+<h2 class="r" data-i="h_ct">Vamos construir algo juntos?</h2>
+<p class="sub r" data-i="ct">Diadema, São Paulo · Disponível para projetos e oportunidades.</p>
+<div class="r"><a class="big" href="mailto:bruno_p.santos@hotmail.com">bruno_p.santos@hotmail.com</a></div>
+<div class="cta r"><a class="btn p" href="https://linkedin.com/in/brunop-santos" target="_blank" rel="noopener">LinkedIn</a><a class="btn s" href="https://github.com/brunao1501" target="_blank" rel="noopener">GitHub</a><a class="btn s" href="https://wa.me/5511994247375" target="_blank" rel="noopener">WhatsApp</a></div>
+</div></section>
+<footer>© 2026 Bruno Pereira Santos · BGTech Consulting</footer>
+
+<script>
+const en={n1:"About",n2:"Projects",n3:"Experience",n4:"Contact",eyebrow:"IT Analyst · Tech Education",lead:"I build digital solutions with web, cloud, data and AI — and teach the next generation to do the same.",cta1:"See projects",cta2:"Get in touch",h_about:"From help desk to classroom.",about:"I started in tech through support, where you have to solve fast and explain well. I moved into infrastructure, cloud and web development — and today I teach IT to middle and high school students while leading BGTech Consulting.",s1:"years in IT",s2:"public projects",s3:"companies founded",s4:"advanced English",h_proj:"Projects.",proj:"Straight from my GitHub — real code, in production.",p1:"Official site of the consultancy: websites, AI agents and IT support for small businesses.",p2:"Storefront for BGTech Store: tech, Apple, Xiaomi and accessories on a pre-order model.",p3:"TypeScript web app aimed at connecting work and people fairly and transparently.",p4:"JavaScript hub bringing together the tools and operations of the BGTech ecosystem.",more:"View on GitHub ›",h_skills:"What I master.",skills:"From infrastructure to digital marketing.",k1:"Infra & Cloud",k2:"Development",k3:"AI & Automation",k4:"Data & Marketing",h_exp:"Journey.",exp:"Seven years solving real problems.",now:"Present",e1t:"IT Analyst & Computer Teacher",e1a:"Google Workspace for Education administration.",e1b:"Computing and programming classes for middle and high school.",e1c:"Teaching materials on Power BI, data and tech careers.",e2t:"Founder & Technology Consultant",e2a:"Custom websites, landing pages and apps.",e2b:"AI agents for customer service and SMB processes.",e2c:"Paid traffic management (Google Ads and Meta Ads).",e3t:"Junior Technical Support Analyst",e3a:"Support for teachers, students and staff; ISO 9001 process standardization.",e4t:"Junior Technical Support — Apple Support",e4a:"Specialized support for iPhone, iPad, Apple Watch and Mac.",edud:"In progress · 2029",e5t:"B.Sc. Software Engineering",e5a:"Google AI Essentials (2026) · AWS Cloud Practitioner in preparation.",h_ct:"Let's build something together?",ct:"Diadema, São Paulo · Open to projects and opportunities."};
+const pt={};document.querySelectorAll("[data-i]").forEach(e=>pt[e.dataset.i]=e.textContent);
+let lang="pt";
+function setLang(l){lang=l;const d=l==="en"?en:pt;document.querySelectorAll("[data-i]").forEach(e=>{if(d[e.dataset.i])e.textContent=d[e.dataset.i]});document.documentElement.lang=l==="en"?"en":"pt-BR";document.getElementById("lang").textContent=l==="en"?"PT":"EN";try{localStorage.setItem("lang",l)}catch(e){}}
+document.getElementById("lang").onclick=()=>setLang(lang==="pt"?"en":"pt");
+try{const s=localStorage.getItem("lang")||(navigator.language.startsWith("pt")?"pt":"en");if(s==="en")setLang("en")}catch(e){}
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const t=en.target;const sib=[...t.parentElement.children].filter(c=>c.classList.contains("r"));t.style.transitionDelay=(sib.indexOf(t)*90)+"ms";t.classList.add("in");const c=t.querySelector("[data-count]");if(c){let n=0,m=+c.dataset.count;const iv=setInterval(()=>{c.textContent=++n;if(n>=m)clearInterval(iv)},120)}io.unobserve(t)}}),{threshold:.15});
+document.querySelectorAll(".r").forEach(e=>io.observe(e));
+document.querySelectorAll(".card").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
+addEventListener("scroll",()=>{const o=document.querySelector(".orb");o.style.translate=`0 ${scrollY*.3}px`},{passive:true});
+</script>
+</body>
+</html>
